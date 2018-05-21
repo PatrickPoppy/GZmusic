@@ -12,7 +12,7 @@ const youtube = new YouTube(process.env.YT_API);
 
 const queue = new Map();
 
-client.user.setUsername("AVmusic")
+client.user.setUsername("AVmusic");
 
 client.user.setActivity('Alfian Verter', {type: 'STREAMING'});
 
