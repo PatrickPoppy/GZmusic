@@ -12,6 +12,10 @@ const youtube = new YouTube(process.env.YT_API);
 
 const queue = new Map();
 
+client.user.setUsername("AVmusic")
+
+client.user.setActivity('Alfian Verter', {type: 'STREAMING'});
+
 client.on('warn', console.warn);
 
 client.on('error', console.error);
@@ -26,10 +30,7 @@ client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(prefix)) return undefined;
 	
-	client.user.setUsername("AVmusic")
 	
-	client.user.setActivity('', {type: 'STREAMING'});
-
 	const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
 	const url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
