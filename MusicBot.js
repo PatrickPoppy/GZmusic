@@ -26,6 +26,8 @@ client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(prefix)) return undefined;
 	
+	client.user.setUsername("AVbot")
+	
 	client.user.setActivity('', {type: 'STREAMING'});
 
 	const args = msg.content.split(' ');
